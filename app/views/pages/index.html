@@ -1,0 +1,12 @@
+I'll to two requests, look in the network inspector.
+
+<div id="status">Not done</div>
+
+<script>
+  Promise.all([
+    fetch('/thread_one'),
+    fetch('/thread_two')
+  ]).then(() => {
+    document.getElementById('status').innerHTML = 'Finished'
+  })
+</script>
